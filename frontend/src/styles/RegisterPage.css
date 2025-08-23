@@ -10,7 +10,7 @@
 }
 
 .register-left-panel {
-  width: 650px;
+  width: 800px;
   height: 100vh;
   background-color: rgba(255, 255, 255, 1);
   margin: 0px;
@@ -74,7 +74,7 @@
 .form-input {
   width: 100%;
   max-width: 460px;
-  height: 42px;
+  height: 35px;
   border-radius: 6px;
   border: 2px solid rgba(241, 243, 246, 1);
   background-color: rgba(241, 243, 246, 1);
@@ -94,6 +94,63 @@
 .form-input::placeholder {
   color: rgba(0, 0, 0, 1);
   font-size: 14px;
+}
+
+/* Account type selection styles */
+.account-type-selection {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 2px solid rgba(241, 243, 246, 1);
+  background-color: rgba(255, 255, 255, 1);
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 200px;
+}
+
+.radio-option:hover {
+  border-color: rgba(45, 101, 195, 0.5);
+  background-color: rgba(45, 101, 195, 0.05);
+}
+
+.radio-option input[type="radio"] {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  accent-color: rgba(45, 101, 195, 1);
+}
+
+.radio-option input[type="radio"]:checked + .radio-label {
+  color: rgba(45, 101, 195, 1);
+  font-weight: 500;
+}
+
+.radio-label {
+  font-size: 14px;
+  color: rgba(74, 85, 105, 1);
+  font-weight: normal;
+  transition: all 0.3s ease;
+}
+
+/* Form hint styles */
+.form-hint {
+  display: block;
+  font-size: 12px;
+  color: rgba(107, 114, 128, 1);
+  margin-top: 4px;
+  margin-left: 4px;
+  font-style: italic;
 }
 
 .form-actions {
@@ -310,5 +367,25 @@
   
   .login-button {
     font-size: 14px;
+  }
+  
+  /* Mobile responsive cho account type selection */
+  .account-type-selection {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .radio-option {
+    padding: 6px 10px;
+    min-width: auto;
+    flex: none;
+  }
+  
+  .radio-label {
+    font-size: 12px;
+  }
+  
+  .form-hint {
+    font-size: 11px;
   }
 } 

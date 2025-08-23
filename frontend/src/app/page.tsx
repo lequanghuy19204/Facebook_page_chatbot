@@ -12,9 +12,23 @@ export default function Home() {
     // TODO: Implement actual login logic
   };
 
-  const handleRegister = (email: string, password: string, confirmPassword: string, fullName: string) => {
-    console.log('Register attempt:', { email, password, confirmPassword, fullName });
+  const handleRegister = (email: string, password: string, confirmPassword: string, fullName: string, accountType: 'admin' | 'staff', companyName?: string, companyCode?: string) => {
+    console.log('Register attempt:', { 
+      email, 
+      password, 
+      confirmPassword, 
+      fullName, 
+      accountType, 
+      companyName, 
+      companyCode 
+    });
     // TODO: Implement actual register logic
+    
+    if (accountType === 'admin') {
+      console.log('Creating new company:', companyName, 'with code:', companyCode);
+    } else {
+      console.log('Joining existing company with code:', companyCode);
+    }
   };
 
   const handleForgotPassword = () => {
